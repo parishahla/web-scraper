@@ -1,4 +1,4 @@
-import pageScraper from "./page.scraper.ts";
+import pageScraper from "./page.scraper.js";
 async function scrapeAll(browserInstance: any) {
   let browser;
   try {
