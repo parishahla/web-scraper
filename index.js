@@ -1,18 +1,17 @@
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import startBrowser from "./browser.js";
-import scraperController from "./page.controller.js";
-
-dotenv.config();
-
-mongoose
-  .connect(process.env.MONGO)
-  .then(() => {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var mongoose_1 = require("mongoose");
+var dotenv_1 = require("dotenv");
+var browser_ts_1 = require("./browser.ts");
+var page_controller_ts_1 = require("./page.controller.ts");
+dotenv_1.default.config();
+mongoose_1.default
+    .connect(process.env.MONGO)
+    .then(function () {
     console.log("Connected to MongoDB");
-  })
-  .catch((err) => console.error(err));
-
+})
+    .catch(function (err) { return console.error(err); });
 //Start the browser and create a browser instance
-let browserInstance = startBrowser();
+var browserInstance = (0, browser_ts_1.default)();
 // Pass the browser instance to the scraper controller
-scraperController(browserInstance);
+(0, page_controller_ts_1.default)(browserInstance);

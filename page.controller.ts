@@ -1,5 +1,4 @@
-import pageScraper from "./page.scraper";
-
+import pageScraper from "./page.scraper.ts";
 async function scrapeAll(browserInstance: any) {
   let browser;
   try {
@@ -9,5 +8,4 @@ async function scrapeAll(browserInstance: any) {
     console.log("Could not resolve the browser instance => ", err);
   }
 }
-
 export default (browserInstance: any) => scrapeAll(browserInstance);
