@@ -24,7 +24,7 @@ const scraperObject = {
                         stars: stars,
                         expirationDate: expirationDate,
                     };
-                    return infoObject;
+                    // return infoObject;
                 });
             });
             // await createInfo(data);
