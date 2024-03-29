@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
 async function startBrowser() {
-  let browser;
+  let browser: any;
   try {
     console.log("Opening the browser......");
     browser = await puppeteer.launch({

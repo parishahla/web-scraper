@@ -1,6 +1,6 @@
 import pageScraper from "./page.scraper.js";
 async function scrapeAll(browserInstance: any) {
-  let browser;
+  let browser: any;
   try {
     browser = await browserInstance;
     await pageScraper.scraper(browser);
