@@ -15,3 +15,4 @@ export default function startFastify() {
 fastifyServer.get("/:city", WEBSITES_PER_CITY_HANLDER);
 //Websites grouped by their star ranking
 fastifyServer.get("/stars", FILTER_STAR_RANKING_HANDLER);
+// fastifyServer.get("/export-csv/?fields=name,stars", DOWNLOAD_HANDLER);

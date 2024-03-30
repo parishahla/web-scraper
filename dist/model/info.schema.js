@@ -11,11 +11,20 @@ const infoSchema = new mongoose.Schema({
         required: [true, "The business must have a domain"],
         trim: true,
     },
+    province: {
+        type: String,
+    },
+    city: {
+        type: String,
+    },
     stars: {
         type: Number,
     },
+    certifiedDate: {
+        type: String,
+    },
     expirationDate: {
-        type: Date,
+        type: String,
     },
 }, { timestamps: true });
 const info = mongoose.model("info", infoSchema);

@@ -1,3 +1,5 @@
+import startBrowser from "./browser.js";
+import scraperController from "./page.controller.js";
 import graphqlServer from "./graphql.server.js";
 import startDB from "./database.js";
 import startFastify from "./server.js";
@@ -8,8 +10,8 @@ startDB();
 //* Start the server
 startFastify();
 //* Start the browser and create a browser instance
-// let browserInstance = startBrowser();
-// scraperController(browserInstance);
+let browserInstance = startBrowser();
+scraperController(browserInstance);
 //* GraphQL
 try {
     const url = await graphqlServer(4000);
