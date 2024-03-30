@@ -15,6 +15,23 @@ const resolvers = {
         return [];
       }
     },
+    filter: async (_: any, { args }) => {
+      return await Info.find(args).catch((err) => console.error(err));
+    },
+    filterByCity: async (_: any, { city }) => {
+      return await Info.find({ city }).catch((err) => console.error(err));
+    },
+    filterByName: async (_: any, { name }) => {
+      return await Info.find({ name }).catch((err) => console.error(err));
+    },
+    filterByDomain: async (_: any, { domain }) => {
+      return await Info.find({ domain }).catch((err) => console.error(err));
+    },
+    filterByExpiration: async (_: any, { expirationDate }) => {
+      return await Info.find({ expirationDate }).catch((err) =>
+        console.error(err)
+      );
+    },
   },
 };
 
