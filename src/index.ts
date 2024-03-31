@@ -6,7 +6,8 @@ import startFastify from "./server.js";
 import fastify from "fastify";
 import Info from "../model/info.schema.js";
 
-const fastifyServer = fastify();
+//! all to try-catch
+
 //* Connect to MongoDB
 startDB();
 
@@ -14,8 +15,8 @@ startDB();
 startFastify();
 
 //* Start the browser and create a browser instance
-// let browserInstance = startBrowser();
-// scraperController(browserInstance);
+let browserInstance = startBrowser();
+scraperController(browserInstance);
 
 //* GraphQL
 try {
