@@ -15,8 +15,8 @@ startDB();
 startFastify();
 
 //* Start the browser and create a browser instance
-let browserInstance = startBrowser();
-scraperController(browserInstance);
+// let browserInstance = startBrowser();
+// scraperController(browserInstance);
 
 //* GraphQL
 try {
