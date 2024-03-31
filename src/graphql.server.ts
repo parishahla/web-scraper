@@ -15,8 +15,8 @@ const resolvers = {
         return [];
       }
     },
-    filter: async (_: any, { args }) => {
-      return await Info.find(args).catch((err) => console.error(err));
+    filter: async (_: any, { filter }) => {
+      return await Info.find(filter).catch((err) => console.error(err));
     },
     filterByCity: async (_: any, { city }) => {
       return await Info.find({ city }).catch((err) => console.error(err));
